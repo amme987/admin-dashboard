@@ -1,0 +1,19 @@
+body {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.dashboard {
+  grid-row: 1 / span 2;
+  background-color: #e11d48;
+}
+
+.header {
+  grid-column-start: 2;
+}
+
+.main {
+  background-color: lightgray;
+}
