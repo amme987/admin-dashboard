@@ -1,6 +1,10 @@
+html {
+  font-size: 20px;
+}
+
 body {
   display: grid;
-  grid-template-columns: min-content auto;
+  grid-template-columns: max-content auto;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -8,43 +12,85 @@ body {
 }
 
 body > * {
-  padding: 15px;
+  padding: 30px;
+}
+
+.dashboard,
+.header {
+  font-weight: bold;
 }
 
 .dashboard {
   grid-row: 1 / span 2;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
   background-color: #e11d48;
-  font-weight: bold;
 }
 
 section {
   display: grid;
-  gap: 15px;
+  gap: 20px;
 }
 
 a {
   display: grid;
   grid-template-columns: 5% auto;
-  gap: 10px;
+  gap: 20px;
   color: white;
   text-decoration: none;
 }
 
-section:first-child {
-  font-size: x-large;
+svg {
+  min-width: 1em;
+  width: 1em;
+  align-self: center;
 }
 
-svg {
-  width: 1em;
+section:first-child {
+  font-size: 1.5rem;
+}
+
+section svg {
   justify-self: center;
   fill: white;
 }
 
 .header {
-  grid-column-start: 2;
+  padding: 30px 60px;
+}
+
+.grid1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.grid1 > * {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+label {
+  flex-basis: 60%;
+}
+
+img {
+  width: 2em;
+}
+
+input {
+  flex: 1;
+  font-size: 1rem;
+  padding: 0px 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: lightgray;
+}
+
+input:focus {
+  outline: 1px solid black;
 }
 
 .main {
