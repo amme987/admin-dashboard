@@ -1,6 +1,6 @@
 body {
   display: grid;
-  grid-template-columns: 20% auto;
+  grid-template-columns: min-content auto;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -28,7 +28,6 @@ section {
 a {
   display: grid;
   grid-template-columns: 5% auto;
-  /* grid-template-rows: min-content; */
   gap: 10px;
   color: white;
   text-decoration: none;
@@ -41,6 +40,7 @@ section:first-child {
 svg {
   width: 1em;
   justify-self: center;
+  fill: white;
 }
 
 .header {
