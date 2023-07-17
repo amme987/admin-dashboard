@@ -16,7 +16,8 @@ body > * {
 }
 
 .dashboard,
-.header {
+.header,
+.title {
   font-weight: bold;
 }
 
@@ -138,5 +139,59 @@ li {
 }
 
 .main {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 25%;
   background-color: lightgray;
+  padding: 30px 20px;
+}
+
+.projects {
+  grid-row: 1 / span 2;
+  display: grid;
+  /* grid-template: auto repeat(3, 1fr) / 1fr 1fr; */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-rows: 1fr;
+  gap: 15px;
+}
+
+.projects > .title {
+  /* grid-area: title; */
+  grid-row: 1;
+  grid-column: 1 / span 2;
+}
+
+.card {
+  /* grid-area: card; */
+  display: grid;
+  grid-template: min-content auto auto / 1ch 1fr;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.color {
+  grid-row: 1 / 4;
+  background-color: #ff3d7d;
+  border-radius: 5px 0 0 5px;
+}
+
+.card > * {
+  padding-left: 15px;
+}
+
+.card > .title {
+  grid-column: 2;
+  padding-top: 15px;
+}
+
+.card div:nth-child(3) {
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.icons {
+  grid-area: 3 / 2 / span 1 / span 1;
+  display: flex;
+  gap: 15px;
+  padding: 0 15px 15px 0;
+  place-self: end;
 }
