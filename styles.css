@@ -87,7 +87,7 @@ input {
   padding: 0px 10px;
   border: none;
   border-radius: 20px;
-  background-color: lightgray;
+  background-color: #e4e8ef;
 }
 
 input:focus {
@@ -140,9 +140,8 @@ li {
 .main {
   display: grid;
   grid-template: 1fr 1fr / 1fr 25%;
-  /* grid-template: auto auto / auto auto; */
   gap: 30px 15px;
-  background-color: lightgray;
+  background-color: #e4e8ef;
   padding: 30px 20px;
 }
 
@@ -159,10 +158,17 @@ li {
   grid-column: 1 / span 2;
 }
 
+.dashboard,
+.header {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
 .projects .card,
 .container {
   background-color: white;
   border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .projects .card {
@@ -228,12 +234,7 @@ hr {
 
 .trending .card {
   display: grid;
-  /* grid-template: 1fr 1fr / auto 1fr; */
   grid-template-columns: auto 1fr;
   align-items: center;
   column-gap: 10px;
 }
-
-/* .trending img {
-  grid-row: span 2;
-} */
